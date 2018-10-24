@@ -1,4 +1,4 @@
-# cbioportal-valididation-demo
+# cbioportal-validation-demo
 Example commands and portal info for demo purposes
 
 ## Pull docker image
@@ -11,9 +11,9 @@ docker pull thehyve/cbioportal:v1.16.0_backport4787-4917
 Perform validation of cBioPortal formatted data.
 ```
 # Set local files and folders
-study_dir=/Users/sander/Desktop/demo/cbioportal-valididation-demo/acc_tcga_pan_can_atlas_2018/
+study_dir=/Users/sander/Desktop/demo/cbioportal-validation-demo/acc_tcga_pan_can_atlas_2018/
 report_dir=/Users/sander/Desktop/demo/reports
-portalinfo_dir=/Users/sander/Desktop/demo/cbioportal-valididation-demo/portalinfo_dir
+portalinfo_dir=/Users/sander/Desktop/demo/cbioportal-validation-demo/portalinfo_dir
 
 docker run -it --rm --net cbio-net \
     -v $study_dir:/study:ro \
@@ -27,9 +27,9 @@ docker run -it --rm --net cbio-net \
 This requires `portal.properties` to be configured with database connection details.
 ```
 # Set local files and folders
-study_dir=/Users/sander/Desktop/demo/cbioportal-valididation-demo/acc_tcga_pan_can_atlas_2018
+study_dir=/Users/sander/Desktop/demo/cbioportal-validation-demo/acc_tcga_pan_can_atlas_2018
 report_dir=/Users/sander/Desktop/demo/reports
-portalinfo_dir=/Users/sander/Desktop/demo/cbioportal-valididation-demo/portalinfo_dir
+portalinfo_dir=/Users/sander/Desktop/demo/cbioportal-validation-demo/portalinfo_dir
 portal_properties=/Users/sander/Desktop/demo/portal.properties
 
 docker run -it --rm --net cbio-net \
@@ -47,7 +47,7 @@ docker restart cbioportal-container
 This is required when genes, gene tables or cancer types have changed in the database, or if the portalInfo directory does not exist yet.
 ```
 # Set local files and folders
-portalinfo_dir=/Users/sander/Desktop/demo/cbioportal-valididation-demo/portalinfo_dir
+portalinfo_dir=/Users/sander/Desktop/demo/cbioportal-validation-demo/portalinfo_dir
 
 docker run --rm --net cbio-net \
     -v $portal_properties:/cbioportal/portal.properties:ro \
