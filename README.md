@@ -15,7 +15,7 @@ study_dir=/Users/sander/Desktop/demo/cbioportal-validation-demo/acc_tcga_pan_can
 report_dir=/Users/sander/Desktop/demo/reports
 portalinfo_dir=/Users/sander/Desktop/demo/cbioportal-validation-demo/portalinfo_dir
 
-docker run -it --rm --net cbio-net \
+docker run -it --rm \
     -v $study_dir:/study:ro \
     -v $report_dir:/outdir \
     -v $portalinfo_dir:/portalinfo:ro \
